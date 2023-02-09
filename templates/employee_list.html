@@ -1,0 +1,13 @@
+<ul>
+    {% for object in object_list %}
+    
+    <li><a href="/details/{{object.emp_no}}">{{object.first_name}} {{object.last_name}}</a> | <a href="/update/{{object.emp_no}}">Edit</a> | <a href="/delete/{{object.emp_no}}">Delete</a></li>
+ 
+    <hr/>
+
+
+    <!-- Agar list bo'sh bo'lsa -->
+    {%empty%}
+    <li>No object yet.</li>
+    {%endfor%}
+</ul>
